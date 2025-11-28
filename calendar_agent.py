@@ -42,4 +42,11 @@ final_schedule = get_ai_response(prompt_3)
 # Output the final Markdown table to the console
 print("\n--- 📝 Final Content Calendar ---")
 print(final_schedule)
-print("\n--- End of Chain ---")
+
+# Save the result to a Markdown file
+filename = "my_content_calendar.md"
+with open(filename, "w", encoding="utf-8") as f:
+    f.write(final_schedule)
+
+print(f"\n--- 💾 Successfully saved to {filename} ---")
+print("--- End of Chain ---")
